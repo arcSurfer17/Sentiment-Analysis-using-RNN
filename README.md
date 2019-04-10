@@ -1,13 +1,16 @@
 # Sentiment-Analysis-using-RNN
 Application of RNN for customer review sentiment analysis
 
-#Downloading the data -README.md  
+#Downloading the data -
 Downloading the data from kaggle.	link-https://www.kaggle.com/datafiniti/consumer-reviews-of-amazon-products/version/2
 
 #About this data -
 
 This is a list of over 1,500 consumer reviews for Amazon products like the Kindle, Fire TV Stick, and more provided by Datafiniti's Product Database. The dataset includes basic product information, rating, review text, and more for each product.
-Loading and preparing the data.
+
+
+#Loading and preparing the data.
+
 
 As a starting point, I loaded a csv file containing 1,500 customer reviews in English with the corresponding rating on the scale from 1 to 5, where 1 is the lowest (negative) and 5 is the highest (positive) rating. Here is a quick glance at the data frame:
 However, as our goal is to predict sentiment — whether review is positive or negative, we have to select appropriate data for this task.
