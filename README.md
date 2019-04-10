@@ -1,11 +1,11 @@
 # Sentiment-Analysis-using-RNN
 Application of RNN for customer review sentiment analysis
 
-#Downloading the data - 
+#Downloading the data -README.md  
 Downloading the data from kaggle.	link-https://www.kaggle.com/datafiniti/consumer-reviews-of-amazon-products/version/2
 
 #About this data - This is a list of over 1,500 consumer reviews for Amazon products like the Kindle, Fire TV Stick, and more provided by Datafiniti's Product Database. The dataset includes basic product information, rating, review text, and more for each product.
-Loading and preparing the data
+Loading and preparing the data.
 
 As a starting point, I loaded a csv file containing 1,500 customer reviews in English with the corresponding rating on the scale from 1 to 5, where 1 is the lowest (negative) and 5 is the highest (positive) rating. Here is a quick glance at the data frame:
 However, as our goal is to predict sentiment — whether review is positive or negative, we have to select appropriate data for this task.
@@ -22,6 +22,8 @@ Now, we split the data set into training and testing using sklearn’s train_tes
 Furthemore, the training set can be split into training and validation set.
 The model is built and the training data is fitted using Keras.
 As embedding requires the size of the vocabulary and the length of input sequences, we set vocabulary_size at the number of words in Tokenizer dictionary + 1 and input_length at 100 (max_words), where value of the latter parameter must be the same as for padding(!). Embedding size parameter specifies how many dimensions will be used to represent each word. Normally one uses the values 50, 100 and 300 as an input for this parameter, but while tuning the model value 32 delivered the best result in this case.Next, we add 1 hidden LSTM layer with 200 memory cells. Potentially, adding more layers and cells can lead to better results.Finally, we add the output layer with sigmoid activation function to predict a probability of a review being positive.
+
+
 After training the model for 10 epochs, we achieve an accuracy of 68.75%  on validation set and 73.5% on test (hold out) set.
 
 
